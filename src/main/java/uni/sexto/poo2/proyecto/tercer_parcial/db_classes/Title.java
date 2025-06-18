@@ -1,12 +1,12 @@
-package uni.sexto.poo2.proyecto.tercer_parcial.DB_Classes;
+package uni.sexto.poo2.proyecto.tercer_parcial.db_classes;
 
-public class Titles {
+public class Title {
     private int emp_no;
     private String title;
     private String from_date;
     private String to_date;
 
-    public Titles(int emp_no, String title, String from_date, String to_date) {
+    public Title(int emp_no, String title, String from_date, String to_date) {
         this.emp_no = emp_no;
         this.title = title;
         this.from_date = from_date;

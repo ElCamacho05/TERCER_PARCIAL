@@ -1,20 +1,19 @@
-package uni.sexto.poo2.proyecto.tercer_parcial;
+package uni.sexto.poo2.proyecto.tercer_parcial.db_classes;
 
 public class Department {
-    private int dept_no;
+    private String dept_no;
     private String dept_name;
 
-    public Department(int dept_no, String dept_name) {
+    public Department(String dept_no, String dept_name) {
         this.dept_no = dept_no;
         this.dept_name = dept_name;
     }
 
 
-
-    public int getDept_no() {
+    public String getDept_no() {
         return dept_no;
     }
-    public void setDept_no(int dept_no) {
+    public void setDept_no(String dept_no) {
         this.dept_no = dept_no;
     }
 

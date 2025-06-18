@@ -1,12 +1,12 @@
-package uni.sexto.poo2.proyecto.tercer_parcial.DB_Classes;
+package uni.sexto.poo2.proyecto.tercer_parcial.db_classes;
 
-public class Salaries {
+public class Salary {
     private int emp_no;
     private int salary;
     private String from_date;
     private String to_date;
 
-    public Salaries(int emp_no, int salary, String from_date, String to_date) {
+    public Salary(int emp_no, int salary, String from_date, String to_date) {
         this.emp_no = emp_no;
         this.salary = salary;
         this.from_date = from_date;

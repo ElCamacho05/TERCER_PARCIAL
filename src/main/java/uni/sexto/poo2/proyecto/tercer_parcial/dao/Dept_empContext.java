@@ -1,6 +1,6 @@
-package uni.sexto.poo2.proyecto.tercer_parcial.DB_Classes.dao;
+package uni.sexto.poo2.proyecto.tercer_parcial.dao;
 
-import uni.sexto.poo2.proyecto.tercer_parcial.DB_Classes.Dept_emp;
+import uni.sexto.poo2.proyecto.tercer_parcial.db_classes.Dept_emp;
 
 import java.sql.*;
 

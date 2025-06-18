@@ -1,6 +1,6 @@
-package uni.sexto.poo2.proyecto.tercer_parcial.DB_Classes.dao;
+package uni.sexto.poo2.proyecto.tercer_parcial.dao;
 
-import uni.sexto.poo2.proyecto.tercer_parcial.DB_Classes.*;
+import uni.sexto.poo2.proyecto.tercer_parcial.db_classes.*;
 import java.sql.*;
 
 public class EmployeeContext {
