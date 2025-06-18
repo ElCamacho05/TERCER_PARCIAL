@@ -7,6 +7,11 @@
 </head>
 <body>
 <h2>Empleados</h2>
+<form action="Employee_details" method="get">
+    <label for="emp_no">Buscar empleado:</label>
+    <input type="text" name="emp_no" id="emp_no">
+    <button type="submit">Buscar</button>
+</form>
 <div>
     <c:if test="${currentPage > 1}">
         <a href="Employees_servlet?page=${currentPage - 1}"> <- Anterior </a>
@@ -27,7 +32,7 @@
     </tr>
     <c:forEach var="e" items="${employees}">
         <tr>
-            <td>${e.emp_no}</td>
+            <td><a href="Employee_details?emp_no=${e.emp_no}">${e.emp_no}</a></td>
             <td>${e.birth_date}</td>
             <td>${e.first_name}</td>
             <td>${e.last_name}</td>

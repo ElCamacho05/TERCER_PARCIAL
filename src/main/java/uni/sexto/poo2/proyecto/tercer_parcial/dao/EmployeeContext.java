@@ -54,6 +54,16 @@ public class EmployeeContext {
         }
     }
 
+    public ResultSet getEmployeeDetails(int emp_no) {
+        String sql = getEmployeeDetailsStatement(emp_no);
+        try {
+            PreparedStatement prepared = connection.prepareStatement(sql);
+            return prepared.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
     // MySQL string formated methods
 
@@ -89,6 +99,16 @@ public class EmployeeContext {
 
     private String getEmployeeByIdStatement(int emp_no) {
         return "SELECT emp_no, birth_date, first_name, last_name, gender, hire_date FROM employees WHERE emp_no = " + emp_no;
+    }
+
+    private String getEmployeeDetailsStatement(int emp_no) {
+        return "SELECT employees.emp_no, employees.birth_date, employees.first_name, employees.last_name, employees.gender, employees.hire_date, salaries.salary, departments.dept_no " +
+                "FROM employees " +
+                "JOIN salaries on employees.emp_no = salaries.emp_no " +
+                "JOIN dept_emp on dept_emp.emp_no = employees.emp_no " +
+                "JOIN departments on dept_emp.dept_no = departments.dept_no " +
+                "WHERE employees.emp_no = " + emp_no+
+                " order by salaries.to_date desc";
     }
 
     // close connection

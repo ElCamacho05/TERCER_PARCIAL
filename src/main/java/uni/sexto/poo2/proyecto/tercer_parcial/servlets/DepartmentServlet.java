@@ -1,4 +1,4 @@
-package uni.sexto.poo2.proyecto.tercer_parcial;
+package uni.sexto.poo2.proyecto.tercer_parcial.servlets;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;

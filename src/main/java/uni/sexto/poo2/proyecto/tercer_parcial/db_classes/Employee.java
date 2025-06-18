@@ -8,6 +8,9 @@ public class Employee {
     private String gender;
     private String hire_date;
 
+    private int salary;
+    private String dept_no;
+
     public Employee(int emp_no,
                     String birth_date,
                     String first_name,
@@ -20,6 +23,24 @@ public class Employee {
         this.last_name = last_name;
         this.gender = gender;
         this.hire_date = hire_date;
+
+    }
+    public Employee(int emp_no,
+                    String birth_date,
+                    String first_name,
+                    String last_name,
+                    String gender,
+                    String hire_date,
+                    int salary,
+                    String dept_no) {
+        this.emp_no = emp_no;
+        this.birth_date = birth_date;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.gender = gender;
+        this.hire_date = hire_date;
+        this.salary = salary;
+        this.dept_no = dept_no;
 
     }
 
@@ -70,4 +91,19 @@ public class Employee {
         this.hire_date = hire_date;
     }
 
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public String getDept_no() {
+        return dept_no;
+    }
+
+    public void setDept_no(String dept_no) {
+        this.dept_no = dept_no;
+    }
 }
