@@ -54,6 +54,16 @@ public class DepartmentContext {
         }
     }
 
+    public ResultSet getAllEmployeesFromDepartment(String dept_no) {
+        String sql = getAllEmployeesFromDepartmentStatement(dept_no);
+        try {
+            PreparedStatement prepared = connection.prepareStatement(sql);
+            return prepared.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
     // MySQL string formated methods
 
@@ -80,6 +90,18 @@ public class DepartmentContext {
 
     private String getDepartmentByIdStatement(String dept_no) {
         String template = "SELECT dept_no, dept_name FROM Department WHERE dept_no = '%s'";
+        return String.format(template,
+                dept_no
+        );
+    }
+
+    private String getAllEmployeesFromDepartmentStatement(String dept_no) {
+        String template = "SELECT employees.emp_no, employees.birth_date, employees.first_name, employees.last_name, employees.gender, employees.hire_date, salaries.salary, departments.dept_no " +
+                "from departments " +
+                "join dept_emp on departments.dept_no = dept_emp.dept_no " +
+                "join employees on employees.emp_no = dept_emp.emp_no " +
+                "join salaries on salaries.emp_no = employees.emp_no " +
+                "where departments.dept_no like '%s';";
         return String.format(template,
                 dept_no
         );

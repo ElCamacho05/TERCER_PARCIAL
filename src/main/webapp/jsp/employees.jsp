@@ -7,11 +7,13 @@
 </head>
 <body>
 <h2>Empleados</h2>
+
 <form action="Employee_details" method="get">
     <label for="emp_no">Buscar empleado:</label>
     <input type="text" name="emp_no" id="emp_no">
     <button type="submit">Buscar</button>
 </form>
+
 <div>
     <c:if test="${currentPage > 1}">
         <a href="Employees_servlet?page=${currentPage - 1}"> <- Anterior </a>

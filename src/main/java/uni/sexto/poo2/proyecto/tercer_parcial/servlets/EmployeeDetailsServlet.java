@@ -43,6 +43,7 @@ public class EmployeeDetailsServlet extends HttpServlet {
                 req.setAttribute("employee", emp);
             }
 
+
             RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/employee_details.jsp");
             dispatcher.forward(req, resp);
         } catch (Exception e) {

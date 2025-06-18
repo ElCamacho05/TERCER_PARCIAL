@@ -7,15 +7,7 @@
 </head>
 <body>
 <h2>Detalles del empleado</h2>
-<%--<div>--%>
-<%--    <c:if test="${currentPage > 1}">--%>
-<%--        <a href="Employees_servlet?page=${currentPage - 1}"> <- Anterior </a>--%>
-<%--    </c:if>--%>
-<%--    Pagina ${currentPage}--%>
-<%--    <c:if test="${hasNext}">--%>
-<%--        <a href="Employees_servlet?page=${currentPage + 1}"> Siguiente -></a>--%>
-<%--    </c:if>--%>
-<%--</div>--%>
+
 <table border="1">
     <tr>
         <th>emp_no</th>
@@ -27,7 +19,6 @@
         <th>salary</th>
         <th>dept_no</th>
     </tr>
-<%--    <c:forEach var="e" items="${employee}">--%>
         <tr>
             <td>${employee.emp_no}</td>
             <td>${employee.birth_date}</td>
@@ -36,9 +27,9 @@
             <td>${employee.gender}</td>
             <td>${employee.hire_date}</td>
             <td>${employee.salary}</td>
-            <td>${employee.dept_no}</td>
+<%--            <td>${employee.dept_no}</td>--%>
+            <td><a href="Department_details?dept_no=${employee.dept_no}">${employee.dept_no}</a></td>
         </tr>
-<%--    </c:forEach>--%>
 </table>
 
 </body>
